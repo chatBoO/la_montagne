@@ -1,0 +1,256 @@
+main {
+    width: 85%;
+    margin: 0 auto 30px;
+    background: $white1;
+
+    img {
+        width: 100%;
+    }
+
+    .section1 {
+        width: 80%;
+        margin: 0 auto;
+
+        span {
+            padding: 70px 0;
+            position: relative;
+            display: block;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                width: 37%;
+                height: 1px;
+                background: $grey1;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media screen and (max-width: 700px) {
+                    width: 30%;
+                }
+
+                @media screen and (max-width: 400px) {
+                    width: 24%;
+                }
+            }
+
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+        }
+
+        h2 {
+            @include title;
+            font-size: 3rem;
+
+            @media screen and (max-width: 700px) {
+                    font-size: 1.5rem;
+                }
+        }
+
+        p {
+            width: 60%;
+            margin: 30px auto;
+            line-height: 35px;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        .btn {
+            margin: 50px 0 90px;
+        }
+    }
+
+    .section2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-top: 1px solid $grey1;
+
+        @media screen and (max-width: 700px) {
+                grid-template-columns: 1fr;
+            }
+
+        .left-part,
+        .right-part {
+            padding: 60px;
+
+            span {
+                font-size: 0.75rem;
+            }
+
+            h3 {
+                margin: 20px 0;
+                @include title;
+                line-height: 28px;
+            }
+
+            p {
+                text-align: left;
+                line-height: 30px;
+                margin: 30px 0;
+                font-size: 0.8rem;
+            }
+        }
+
+        .left-part {
+            border-right: 1px solid $grey1;
+        }
+    }
+}
+
+.mongolfiere {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    animation: mongolfiere 50s linear infinite alternate;
+    user-select: none;
+}
+
+.mongolfiere2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    animation: mongolfiere2 60s linear infinite alternate-reverse;
+    user-select: none;
+}
+
+@keyframes mongolfiere {
+    0% {
+        top: 170px;
+        left: 0%;
+        transform: rotate(5deg);
+    }
+
+    10% {
+        top: 180px;
+        left: 6%;
+        transform: rotate(-10deg);
+    }
+
+    20% {
+        top: 167px;
+        left: 17%;
+        transform: rotate(5deg);
+    }
+
+    30% {
+        top: 184px;
+        left: 28%;
+        transform: rotate(4deg);
+    }
+
+    40% {
+        top: 190px;
+        left: 40%;
+        transform: rotate(7deg);
+    }
+
+    50% {
+        top: 195px;
+        left: 50%;
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        top: 190px;
+        left: 60%;
+        transform: rotate(-5deg);
+    }
+
+    70% {
+        top: 180px;
+        left: 72%;
+        transform: rotate(-5deg);
+    }
+
+    80% {
+        top: 230px;
+        left: 84%;
+        transform: rotate(5deg);
+    }
+
+    90% {
+        top: 225px;
+        left: 90%;
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        top: 219px;
+        left: 95%;
+    }
+}
+
+@keyframes mongolfiere2 {
+    0% {
+        top: 60px;
+        left: 0%;
+        transform: rotate(5deg);
+    }
+
+    10% {
+        top: 80px;
+        left: 6%;
+        transform: rotate(-10deg);
+    }
+
+    20% {
+        top: 67px;
+        left: 17%;
+        transform: rotate(5deg);
+    }
+
+    30% {
+        top: 74px;
+        left: 28%;
+        transform: rotate(4deg);
+    }
+
+    40% {
+        top: 94px;
+        left: 40%;
+        transform: rotate(7deg);
+    }
+
+    50% {
+        top: 85px;
+        left: 50%;
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        top: 70px;
+        left: 60%;
+        transform: rotate(-5deg);
+    }
+
+    70% {
+        top: 74px;
+        left: 72%;
+        transform: rotate(-5deg);
+    }
+
+    80% {
+        top: 80px;
+        left: 84%;
+        transform: rotate(5deg);
+    }
+
+    90% {
+        top: 75px;
+        left: 90%;
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        top: 69px;
+        left: 95%;
+    }
+}
